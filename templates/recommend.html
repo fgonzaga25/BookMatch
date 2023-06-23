@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommend Me</title>
+    <link rel = "icon" href = "https://raw.githubusercontent.com/n3lloc/PLP/main/frontend/headerLogo.png" 
+        type = "image/x-icon">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/recommend.css') }} ">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/style.css') }} ">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+    </style>
+    
+</head>
+
+<body>
+    <header class="headerContainer">
+        <div class="headerContainerLeft">
+            <a href="../index"><img id="headerLogo" src=" {{ url_for('static', filename='images/headerLogo.png') }} " alt="headerLogo"></a>
+        </div>
+
+        <navbar class="headerContainerRight">
+            <a href="recommend"><button class="headerButtons">Recommend Me</button></a>
+            
+            <a href="../about"><button class="headerButtons">About</button></a>
+            
+            <a href="../contact"><button class="headerButtons">Contact</button></a>
+        </navbar>
+    </header>
+
+    <section class="containerSection">
+        <form class="containerForm">
+            <input type="text" placeholder="Book Name" class="bookInput">
+            <button type="button" class="bookInputButton" onclick="input()">Send</button>
+        </form>
+        <br/>
+    </section>
+
+    <section class="containerBooks"></section>
+
+    <footer class="footerClass">/Contact Us</footer>
+
+    <script src=" {{ url_for('static', filename='js/formatR.js') }} "></script>
+    <script>
+        var result = '{{ result }}'.replace(/&#34;/g,'')
+        if (result){
+            result = result.slice(1, -1);
+            result = result.split("], [");
+            var books = result.map(function(elemento) {
+                var c1 = elemento.replace(/\[|\]/g, '');
+                var c2 = c1.split(/,(?![^\[]*\])/);
+                var c3 = c2.map(function(subelemento) {
+                    return subelemento.replace(/"/g, '');
+                });
+                    return c3;
+            });
+            books.forEach(element => {
+                if (element.length > 4){
+                    let newStr = element[0] + "," + element[1]
+                    element.splice(1,1)
+                    element[0] = newStr
+                }
+            });
+            
+            books.forEach(element => {
+                document.querySelector('.containerBooks').innerHTML += formatR(element)
+            })
+        }
+    </script>
+    <script src=" {{ url_for('static', filename='js/input.js') }} "></script>
+</body>
+
+</html>

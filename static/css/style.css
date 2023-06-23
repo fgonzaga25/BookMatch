@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headerContainer {
+    background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /* height: 30vh; */
+}
+
+.headerContainerLeft {
+    margin-top: auto;
+    margin-left: 12vw;
+}
+
+.headerContainerRight {
+    display: flex;
+    margin-right: 12vw;
+}
+
+#headerLogo {
+    height: 30vh;
+    transition: 0.3s;
+}
+
+#headerLogo:hover {
+    border-radius: 15vh;
+    border: 4px solid #ffffff;
+}
+
+.headerButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Abril Fatface', cursive;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 3vh;
+    height: 7vh;
+    flex-basis: 25vh;
+    flex-grow: 0;
+    border-radius: 3vh;
+    transition: 1s;
+    cursor: pointer;
+    padding: 1vw;
+}
+
+.headerButtons:last-child {
+    margin-right: 0;
+}
+
+
+.headerButtons:hover {
+    border: 3px solid #006aff;
+    background-color: #5b6e87;
+}
+
+.headerContainer a {
+    text-decoration: none;
+    margin: 10vh 1.8vw;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.containerSection {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Abril Fatface', cursive;
+    height: 15vh;
+    font-size: 3vh;
+    background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d);
+}
+
+#containerForm {
+    align-self: center;
+}
+
+.containerForm label {
+    border: 5px solid #ffffff;
+    font-family: 'Abril Fatface', cursive;
+    height: 4vh;
+    font-size: 3vh;
+    color: #ffffff;
+    border-radius: 3vh;
+    background-color: transparent;
+    transition: 0.5s;
+    text-align: center;
+}
+
+#myBtn {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 5vh;
+    font-size: 4vh;
+    border-color: transparent;
+    background-color: #006aff;
+    transition: 0.4s;
+}
+
+#myBtn:hover {
+    border: 3px solid #006aff;
+    background-color: #5b6e87;
+}
+
+#filter {
+    border: 2px solid #3a3a3a;
+    background-color: #ebebeb;
+    padding: 0.8em;
+    width: 18vw;
+    border-radius: 30px;
+    font-size: large;
+    color:#193177;
+    /* -webkit-animation: backwards;
+    animation: forwards; */
+}
+
+.optionClass {
+    align-self: center;
+}
+
+#inputGo {
+    border: 2px solid #006aff;
+    padding: 0.8em 1.5em;
+    margin-left: 2em;
+    font-size: large;
+    background-color: #006aff;
+    color: #fff;
+    border-radius: 30px;
+}
+
+#inputGo:hover{
+    transition: 0.2s;
+    border: 3px solid #006aff;
+    background-color: #5b6e87;
+    cursor: pointer;
+}
+
+.containerBooks {
+    background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.books {
+    border: 4px solid #006aff;
+    height: 38vh;
+    width: 50vh;
+    background-color: #ffffff;
+    padding-bottom: 3vh;
+    border-radius: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booksImg {
+    margin: 2vh;
+    max-height: 25vh;
+    border-radius: 1vh;
+    /* position: relative; */
+    padding-right: 24vh;
+}
+
+#infoDiv {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3vh;
+    width: 40vh;
+    position: absolute;
+    padding-left: 19vh;
+    max-height: 270px;
+}
+
+.footerClass {
+    background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d);
+    font-size: 4vh;
+    font-family: 'Abril Fatface', cursive;
+    padding: 4vh;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (max-width: 910px) {
+    .headerContainer {
+        flex-direction: row;
+    }
+    #headerLogo {
+        height: 20vh;
+    }
+}
+
+@media (max-width: 835px) {
+
+    .headerContainer {
+        justify-content: center;
+        gap: 10px;
+    }
+    .headerButtons {
+        font-size: 1vh;
+        height: 7vh;
+        flex-basis: 15vh;
+        flex-grow: 0;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .headerContainer {
+        justify-content: center;
+        gap: 10px;
+    }
+    .headerButtons {
+        border: 2px solid white;
+        font-size: 2vh;
+        border-radius: 1vh;
+        height: 6vh;
+        flex-basis: 10vh;
+        flex-grow: 0;
+    }
+    .books {
+        border: 3px solid #006aff;
+        height: 25vh;
+        width: 30vh;
+    }
+    .booksImg {
+        align-self: center;
+        height: 15vh;
+    }
+    #infoDiv {
+        font-size: 2.3vh;
+        margin-bottom: 6vh;
+    }
+}
+
+@media (max-width: 485px) {
+    .headerButtons {
+        border: 2px solid white;
+        font-size: 0.5vh;
+        border-radius: 1vh;
+        height: 5vh;
+        flex-basis: 5vh;
+    }
+    #filterLabel {
+        height: 4vh;
+        font-size: 2vh;
+    }
+}

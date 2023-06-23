@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título e logo no CHROME -->
+    <title>BookMatch</title>
+    <link rel = "icon" href ="https://raw.githubusercontent.com/n3lloc/PLP/main/frontend/headerLogo.png"
+        type = "image/x-icon">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/style.css') }} ">
+
+
+    <!-- Fontes -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+    </style>
+</head>
+
+<body>
+    <header class="headerContainer">
+        <div class="headerContainerLeft">
+            <a href="index"><img id="headerLogo" src=" {{ url_for('static', filename='images/headerLogo.png') }} " alt="headerLogo"></a>
+        </div>
+        <div class="headerContainerRight">    
+            <a href="recommend"><button class="headerButtons">Recommend Me</button></a>
+            
+            <a href="about"><button class="headerButtons">About</button></a>
+            
+            <a href="contact"><button class="headerButtons">Contact</button></a>
+        </div>
+    </header>
+    
+    <section class="containerSection">
+        <form id="containerForm">
+            <label for="filterLabel">Filter:</label>
+            <select id="filter" name="filter">
+                <option class="optionClass" value="5">Melhores Avaliados</option>
+                <option class="optionClass" value="1">Mais Avaliados</option>
+                <option class="optionClass" value="2">Menos Avaliados</option>
+                <option class="optionClass" value="3">Mais Lidos</option>
+                <option class="optionClass" value="4">Menos Lidos</option>
+                <option class="optionClass" value="6">Piores Avaliados</option>
+            </select>
+            <input type="button" value="Submit" onclick="parseCSV()" id="inputGo">
+        </form>
+    </section>  
+    
+    <section class="buttonSection">
+        <button id="myBtn" title="goToTop">&#8593;</button>
+    </section>
+
+    <section class="containerBooks"></section>
+    
+    <footer class="footerClass">/Contact Us</footer>
+
+    <script src=" {{ url_for('static', filename='js/papaparse.min.js') }} "></script>
+    <script src=" {{ url_for('static', filename='js/format.js') }} "></script>
+    <script src=" {{ url_for('static', filename='js/csv.js') }} "></script>
+    <script src=" {{ url_for('static', filename='js/button.js') }}"></script>
+</body>
+</html>
