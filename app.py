@@ -12,11 +12,12 @@ def index():
 def recommend():
     return render_template('recommend.html')
 
+@app.route('/recommend/')
 @app.route('/recommend/<input>')
-def input(input):
+def input(input=''):
     inputTratado = str(input.replace('_', ' '))
     recommendedBooks = rec.recomendar(inputTratado)
-    return render_template('recommend.html', result = recommendedBooks)
+    return render_template('recommend.html', result = recommendedBooks, search = inputTratado)
 
 @app.route('/about')
 def about():

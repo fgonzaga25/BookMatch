@@ -2,7 +2,7 @@ import populars as p
 import os
 
 melhores_medias = p.populares()
-piores_medias = p.populares(decrescente=True, qtd_minima_avaliacoes=1)
+piores_medias = p.populares(decrescente=True, qtd_minima_avaliacoes=100)
 mais_visualizados = p.populares(filtrar_por='visualizacoes')
 menos_visualizados = p.populares(filtrar_por='visualizacoes', decrescente=True, qtd_minima_avaliacoes=1)
 mais_avaliados = p.populares(filtrar_por='mais_avaliados')
