@@ -173,7 +173,8 @@ a:visited {
 
 .booksImg {
     margin: 2vh;
-    max-height: 25vh;
+    height: 25vh;
+    width: 40vh;
     border-radius: 1vh;
     /* position: relative; */
     padding-right: 24vh;
