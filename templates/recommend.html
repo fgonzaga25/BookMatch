@@ -41,14 +41,25 @@
         </form>
         <br/>
     </section>
+    <div class="inputBook"></div>
     <section class="containerBooks"></section>
 
     <footer id="footerClass">/Contact Us</footer>
 
     <script src=" {{ url_for('static', filename='js/formatR.js') }} "></script>
     <script>
+        // Showing results for
+        var search = '{{ search }}'
+        if (search){
+            document.querySelector('.inputBook').innerHTML = '<h3>Showing recommendations for "{{search}}".</h3>'
+        }
+        // Receiving the data and creating arrays with it
         var result = '{{ result }}'.replace(/&#34;/g,'')
-        if (result){
+        if (result == 'No books were found with the title'){
+            document.querySelector('.containerBooks').innerHTML += result + ' "{{search}}".'
+            document.querySelector('.containerBooks').style = 'color: #fff';
+        }
+        else if (result){
             result = result.slice(1, -1);
             result = result.split("], [");
             var books = result.map(function(elemento) {

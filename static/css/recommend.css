@@ -9,6 +9,10 @@ body {
     background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d);
 }
 
+body {
+    background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d);
+}
+
 .headerContainer {
     /* background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d); */
     display: flex;
@@ -123,6 +127,20 @@ a:visited {
     font-size: 3vh;
     /* background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d); */
     padding: 5vh;
+}
+
+.inputBook{
+    color: #ffffff;
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    height: 7vh;
+    font-size: 3vh;
+    background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d);
+    padding: 5vh;
+}
+
+.containerBooks{
+    padding: 4vw;
 }
 
 .containerForm {
