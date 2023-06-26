@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.headerContainer {
+body {
     background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d);
+}
+
+.headerContainer {
+    /* background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d); */
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -108,13 +114,99 @@ a:visited {
     text-decoration: none;
 }
 
+#sectionTitle {
+    font-family: 'Marcellus SC', serif;
+    font-size: 5vh;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    height: 10vh;
+    /* background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d); */
+}
+
+.imgDevelopers {
+    height: 40vh;
+    width: 40vh;
+    border-radius: 3vh;
+}
+
+.divDevelopers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20vh;
+}
+
+.divAlecio {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2vh;
+    color: #ffffff;
+}
+
+.divFernando {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2vh;
+    color: #ffffff;
+}
+
+#titleP {
+    font-family: 'Marcellus SC', serif;
+    font-size: 4vh;
+    color: #ffffff;
+    text-align: center;
+    padding: 2vh;
+    border: 5px inset rgba(56, 121, 191, 0.65);
+    margin-bottom: 2vh;
+}
+
+#iconId {
+    height: 5vh;
+    width: 5vh;
+}
+
+.contactDevelopers {
+    display: flex;
+    font-size: 2.4vh;
+    align-items: start;
+    justify-items: center;
+    padding: 2vh;
+    gap: 2vh;
+    height: auto;
+}
+
+.emailDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.githubDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 .footerClass {
-    background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d);
+    /* background-image: linear-gradient(to right, #1d3557, #1d3557, #1d1d1d); */
     font-size: 4vh;
     font-family: 'Abril Fatface', cursive;
     padding: 4vh;
     color: #ffffff;
     text-align: center;
-    height: 100vh;
-    padding-top: 30vh;
+    margin-top: 4vh;
 }
